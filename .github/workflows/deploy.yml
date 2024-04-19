@@ -36,7 +36,7 @@ jobs:
           AZURE_CREDENTIALS: ${{ secrets.AzureSPN }}
 
       - name: Provision Azure Resources
-        run: azd provision --no-prompt --no-state
+        run: azd provision --no-prompt
         env:
           AZURE_ENV_NAME: ${{ vars.RESOURCE_GROUP_NAME }}
           AZURE_LOCATION: ${{ vars.REGION }}
